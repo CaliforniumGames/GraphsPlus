@@ -194,7 +194,9 @@ namespace GraphsPlus
             // Start Positions
             float posX = 0;
             float posY = 0;
-
+            float y = 0;
+            string inputStr = funcInput.Text;
+            
             // Position that is calculated based on sin of X
 
             // Setting Line params based on LineConfig;
@@ -204,14 +206,15 @@ namespace GraphsPlus
             tanGraph = canvas.CreateGraphics();
 
 
-            for (float x = 0; x < funcLength; x += accuracy)
+
+            for (y = 0; y < funcLength; y += accuracy)
             {
-                drawY2 = (float)input;
+               // drawY2 = (float)Math.Tan(10);
                 // Draws a line from start position to end poisition. End position is calculated based on the SIN function of X. X is multiplied by scale
                 // to move it forward along the x axis and y is multiplyed by scale ant vert offset to position it in the center of the form.
-                tanGraph.DrawLine(myPen, posX * scale, posY * scale + vertOffset, x * scale, drawY2 * scale + vertOffset);
+                tanGraph.DrawLine(myPen, posX * scale, posY * scale + vertOffset, y * scale, drawY2 * scale + vertOffset);
 
-                posX = x;
+                posX = y;
                 posY = drawY2;
             }
             DrawAxis();
@@ -220,44 +223,52 @@ namespace GraphsPlus
         // Math sin
         private void button3_Click(object sender, EventArgs e)
         {
-
+            double x = 0;
+            string inputStr = funcInput.Text;
+            inputStr.Replace("y", x.ToString());
+            double number;
+            number = double.Parse(inputStr);  
+          
+            input = Math.Sin(number); 
         }
 
         // Math cos
         private void button4_Click(object sender, EventArgs e)
         {
-
+            double x = 0;
+            input = Math.Cos(double.Parse(funcInput.Text));
         }
 
         // Math Tan
         private void button5_Click(object sender, EventArgs e)
         {
-
+            double x = 0;
+            input = Math.Tan(double.Parse(funcInput.Text));
         }
 
 
         // Add
         private void button6_Click(object sender, EventArgs e)
         {
-
+            drawY2 = drawY2 + (float)input;
         }
 
         // Subtract
         private void button7_Click(object sender, EventArgs e)
         {
-
+            drawY2 = drawY2 - (float)input;
         }
 
         // Multiply
         private void button8_Click(object sender, EventArgs e)
         {
-
+            drawY2 = drawY2 * (float)input;
         }
 
         // Divide
         private void button9_Click(object sender, EventArgs e)
         {
-
+            drawY2 = drawY2 / (float)input;
         }
 
         
@@ -295,7 +306,7 @@ namespace GraphsPlus
                 useRandomColor = false;
             }
         }
-
+        #region mistakes 
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -306,6 +317,11 @@ namespace GraphsPlus
 
         }
 
+        private void GraphPlus_Load(object sender, EventArgs e)
+        {
+             
+        }
+        #endregion
 
         /// <summary>
         /// Handles drawing the graphic.

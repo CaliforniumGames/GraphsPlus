@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cPos4 = new System.Windows.Forms.TextBox();
+            this.cPos3 = new System.Windows.Forms.TextBox();
+            this.cPos2 = new System.Windows.Forms.TextBox();
+            this.cPos1 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.fAccuracy = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,32 +65,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.canvas = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cPos1 = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.cPos2 = new System.Windows.Forms.TextBox();
-            this.cPos3 = new System.Windows.Forms.TextBox();
-            this.cPos4 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.funcInput = new System.Windows.Forms.TextBox();
-            this.mathSin = new System.Windows.Forms.Button();
-            this.mathCos = new System.Windows.Forms.Button();
-            this.mathTan = new System.Windows.Forms.Button();
-            this.addTo = new System.Windows.Forms.Button();
-            this.subtractFrom = new System.Windows.Forms.Button();
-            this.multiply = new System.Windows.Forms.Button();
-            this.divide = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.divide = new System.Windows.Forms.Button();
+            this.multiply = new System.Windows.Forms.Button();
+            this.subtractFrom = new System.Windows.Forms.Button();
+            this.addTo = new System.Windows.Forms.Button();
+            this.mathTan = new System.Windows.Forms.Button();
+            this.mathCos = new System.Windows.Forms.Button();
+            this.mathSin = new System.Windows.Forms.Button();
+            this.funcInput = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.canvas.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,6 +106,114 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1481, 71);
             this.panel1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.cPos4);
+            this.panel3.Controls.Add(this.cPos3);
+            this.panel3.Controls.Add(this.cPos2);
+            this.panel3.Controls.Add(this.cPos1);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Location = new System.Drawing.Point(1040, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(261, 57);
+            this.panel3.TabIndex = 33;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // cPos4
+            // 
+            this.cPos4.Location = new System.Drawing.Point(143, 31);
+            this.cPos4.Name = "cPos4";
+            this.cPos4.Size = new System.Drawing.Size(52, 20);
+            this.cPos4.TabIndex = 35;
+            this.cPos4.Text = "2";
+            // 
+            // cPos3
+            // 
+            this.cPos3.Location = new System.Drawing.Point(143, 8);
+            this.cPos3.Name = "cPos3";
+            this.cPos3.Size = new System.Drawing.Size(52, 20);
+            this.cPos3.TabIndex = 34;
+            this.cPos3.Text = "2";
+            // 
+            // cPos2
+            // 
+            this.cPos2.Location = new System.Drawing.Point(48, 30);
+            this.cPos2.Name = "cPos2";
+            this.cPos2.Size = new System.Drawing.Size(52, 20);
+            this.cPos2.TabIndex = 33;
+            this.cPos2.Text = "2";
+            // 
+            // cPos1
+            // 
+            this.cPos1.Location = new System.Drawing.Point(48, 6);
+            this.cPos1.Name = "cPos1";
+            this.cPos1.Size = new System.Drawing.Size(52, 20);
+            this.cPos1.TabIndex = 29;
+            this.cPos1.Text = "2";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(106, 35);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(39, 14);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Pos4";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(106, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(39, 14);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Pos3";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(7, 35);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 14);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Pos2";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(7, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 14);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Pos1";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.button2.Location = new System.Drawing.Point(201, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(57, 36);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Circle";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
             // 
             // panel2
             // 
@@ -405,125 +513,6 @@
             this.canvas.TabIndex = 1;
             this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.canvas_Paint);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.button2.Location = new System.Drawing.Point(201, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(57, 36);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Circle";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_2);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(7, 11);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 14);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Pos1";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(7, 35);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 14);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "Pos2";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(106, 10);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(39, 14);
-            this.label12.TabIndex = 31;
-            this.label12.Text = "Pos3";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(106, 35);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 14);
-            this.label13.TabIndex = 32;
-            this.label13.Text = "Pos4";
-            // 
-            // cPos1
-            // 
-            this.cPos1.Location = new System.Drawing.Point(48, 6);
-            this.cPos1.Name = "cPos1";
-            this.cPos1.Size = new System.Drawing.Size(52, 20);
-            this.cPos1.TabIndex = 29;
-            this.cPos1.Text = "2";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.cPos4);
-            this.panel3.Controls.Add(this.cPos3);
-            this.panel3.Controls.Add(this.cPos2);
-            this.panel3.Controls.Add(this.cPos1);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(1040, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(261, 57);
-            this.panel3.TabIndex = 33;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // cPos2
-            // 
-            this.cPos2.Location = new System.Drawing.Point(48, 30);
-            this.cPos2.Name = "cPos2";
-            this.cPos2.Size = new System.Drawing.Size(52, 20);
-            this.cPos2.TabIndex = 33;
-            this.cPos2.Text = "2";
-            // 
-            // cPos3
-            // 
-            this.cPos3.Location = new System.Drawing.Point(143, 8);
-            this.cPos3.Name = "cPos3";
-            this.cPos3.Size = new System.Drawing.Size(52, 20);
-            this.cPos3.TabIndex = 34;
-            this.cPos3.Text = "2";
-            // 
-            // cPos4
-            // 
-            this.cPos4.Location = new System.Drawing.Point(143, 31);
-            this.cPos4.Name = "cPos4";
-            this.cPos4.Size = new System.Drawing.Size(52, 20);
-            this.cPos4.TabIndex = 35;
-            this.cPos4.Text = "2";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Roboto Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(47, 503);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(17, 18);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "x";
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
@@ -543,113 +532,20 @@
             this.panel4.Size = new System.Drawing.Size(1481, 33);
             this.panel4.TabIndex = 35;
             // 
-            // label15
+            // button10
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(12, 11);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(16, 14);
-            this.label15.TabIndex = 36;
-            this.label15.Text = "X";
-            // 
-            // funcInput
-            // 
-            this.funcInput.Location = new System.Drawing.Point(34, 8);
-            this.funcInput.Name = "funcInput";
-            this.funcInput.Size = new System.Drawing.Size(761, 20);
-            this.funcInput.TabIndex = 37;
-            // 
-            // mathSin
-            // 
-            this.mathSin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.mathSin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.mathSin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mathSin.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mathSin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.mathSin.Location = new System.Drawing.Point(801, 4);
-            this.mathSin.Name = "mathSin";
-            this.mathSin.Size = new System.Drawing.Size(87, 26);
-            this.mathSin.TabIndex = 34;
-            this.mathSin.Text = "Math.Sin";
-            this.mathSin.UseVisualStyleBackColor = false;
-            this.mathSin.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // mathCos
-            // 
-            this.mathCos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.mathCos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.mathCos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mathCos.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mathCos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.mathCos.Location = new System.Drawing.Point(894, 4);
-            this.mathCos.Name = "mathCos";
-            this.mathCos.Size = new System.Drawing.Size(87, 26);
-            this.mathCos.TabIndex = 38;
-            this.mathCos.Text = "Math.Cos";
-            this.mathCos.UseVisualStyleBackColor = false;
-            this.mathCos.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // mathTan
-            // 
-            this.mathTan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.mathTan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.mathTan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mathTan.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mathTan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.mathTan.Location = new System.Drawing.Point(987, 4);
-            this.mathTan.Name = "mathTan";
-            this.mathTan.Size = new System.Drawing.Size(87, 26);
-            this.mathTan.TabIndex = 39;
-            this.mathTan.Text = "Math.Tan";
-            this.mathTan.UseVisualStyleBackColor = false;
-            this.mathTan.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // addTo
-            // 
-            this.addTo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.addTo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.addTo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addTo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addTo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.addTo.Location = new System.Drawing.Point(1080, 4);
-            this.addTo.Name = "addTo";
-            this.addTo.Size = new System.Drawing.Size(26, 26);
-            this.addTo.TabIndex = 40;
-            this.addTo.Text = "+";
-            this.addTo.UseVisualStyleBackColor = false;
-            this.addTo.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // subtractFrom
-            // 
-            this.subtractFrom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.subtractFrom.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.subtractFrom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.subtractFrom.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtractFrom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.subtractFrom.Location = new System.Drawing.Point(1112, 4);
-            this.subtractFrom.Name = "subtractFrom";
-            this.subtractFrom.Size = new System.Drawing.Size(26, 26);
-            this.subtractFrom.TabIndex = 41;
-            this.subtractFrom.Text = "-";
-            this.subtractFrom.UseVisualStyleBackColor = false;
-            this.subtractFrom.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // multiply
-            // 
-            this.multiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.multiply.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.multiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.multiply.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.multiply.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.multiply.Location = new System.Drawing.Point(1144, 4);
-            this.multiply.Name = "multiply";
-            this.multiply.Size = new System.Drawing.Size(26, 26);
-            this.multiply.TabIndex = 42;
-            this.multiply.Text = "*";
-            this.multiply.UseVisualStyleBackColor = false;
-            this.multiply.Click += new System.EventHandler(this.button8_Click);
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.button10.Location = new System.Drawing.Point(1254, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(87, 26);
+            this.button10.TabIndex = 44;
+            this.button10.Text = "Draw";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // divide
             // 
@@ -666,20 +562,124 @@
             this.divide.UseVisualStyleBackColor = false;
             this.divide.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button10
+            // multiply
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.button10.Location = new System.Drawing.Point(1254, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(87, 26);
-            this.button10.TabIndex = 44;
-            this.button10.Text = "Draw";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.multiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.multiply.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.multiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.multiply.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.multiply.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.multiply.Location = new System.Drawing.Point(1144, 4);
+            this.multiply.Name = "multiply";
+            this.multiply.Size = new System.Drawing.Size(26, 26);
+            this.multiply.TabIndex = 42;
+            this.multiply.Text = "*";
+            this.multiply.UseVisualStyleBackColor = false;
+            this.multiply.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // subtractFrom
+            // 
+            this.subtractFrom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.subtractFrom.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.subtractFrom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.subtractFrom.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtractFrom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.subtractFrom.Location = new System.Drawing.Point(1112, 4);
+            this.subtractFrom.Name = "subtractFrom";
+            this.subtractFrom.Size = new System.Drawing.Size(26, 26);
+            this.subtractFrom.TabIndex = 41;
+            this.subtractFrom.Text = "-";
+            this.subtractFrom.UseVisualStyleBackColor = false;
+            this.subtractFrom.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // addTo
+            // 
+            this.addTo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.addTo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.addTo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addTo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addTo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.addTo.Location = new System.Drawing.Point(1080, 4);
+            this.addTo.Name = "addTo";
+            this.addTo.Size = new System.Drawing.Size(26, 26);
+            this.addTo.TabIndex = 40;
+            this.addTo.Text = "+";
+            this.addTo.UseVisualStyleBackColor = false;
+            this.addTo.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // mathTan
+            // 
+            this.mathTan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.mathTan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.mathTan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mathTan.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mathTan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.mathTan.Location = new System.Drawing.Point(987, 4);
+            this.mathTan.Name = "mathTan";
+            this.mathTan.Size = new System.Drawing.Size(87, 26);
+            this.mathTan.TabIndex = 39;
+            this.mathTan.Text = "Math.Tan";
+            this.mathTan.UseVisualStyleBackColor = false;
+            this.mathTan.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // mathCos
+            // 
+            this.mathCos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.mathCos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.mathCos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mathCos.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mathCos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.mathCos.Location = new System.Drawing.Point(894, 4);
+            this.mathCos.Name = "mathCos";
+            this.mathCos.Size = new System.Drawing.Size(87, 26);
+            this.mathCos.TabIndex = 38;
+            this.mathCos.Text = "Math.Cos";
+            this.mathCos.UseVisualStyleBackColor = false;
+            this.mathCos.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // mathSin
+            // 
+            this.mathSin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.mathSin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.mathSin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mathSin.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mathSin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.mathSin.Location = new System.Drawing.Point(801, 4);
+            this.mathSin.Name = "mathSin";
+            this.mathSin.Size = new System.Drawing.Size(87, 26);
+            this.mathSin.TabIndex = 34;
+            this.mathSin.Text = "Math.Sin";
+            this.mathSin.UseVisualStyleBackColor = false;
+            this.mathSin.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // funcInput
+            // 
+            this.funcInput.Location = new System.Drawing.Point(34, 8);
+            this.funcInput.Name = "funcInput";
+            this.funcInput.Size = new System.Drawing.Size(761, 20);
+            this.funcInput.TabIndex = 37;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(12, 11);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(16, 14);
+            this.label15.TabIndex = 36;
+            this.label15.Text = "X";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Roboto Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(47, 503);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(17, 18);
+            this.label14.TabIndex = 34;
+            this.label14.Text = "x";
             // 
             // GraphPlus
             // 
@@ -691,14 +691,15 @@
             this.Name = "GraphPlus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Graph Plus";
+            this.Load += new System.EventHandler(this.GraphPlus_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.canvas.ResumeLayout(false);
             this.canvas.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
