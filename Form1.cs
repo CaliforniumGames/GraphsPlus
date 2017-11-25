@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.CodeDom.Compiler;
+using System.Diagnostics;
+using Microsoft.CSharp;
+
 namespace GraphsPlus
 {
     public partial class GraphPlus : Form
@@ -41,19 +45,17 @@ namespace GraphsPlus
             InitializeComponent();
             start_x = canvas.Width / 2;
             start_y = canvas.Height / 2;
+
+           
         }
 
         
 
        
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
+       
 
 
-        
         /// <summary>
         /// Handles Sin drawing
         /// </summary>
@@ -150,8 +152,6 @@ namespace GraphsPlus
             }
         }
 
-        
-
         private void LineConfig()
         {
              vertOffset = canvas.Height / 2;
@@ -160,6 +160,12 @@ namespace GraphsPlus
              accuracy = float.Parse(fAccuracy.Text);
              penWidth = int.Parse(lineWidth.Text);
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
 
         #region Fractal Drawings
         // Checks radio buttons.
@@ -179,6 +185,9 @@ namespace GraphsPlus
                 useRandomColor = false;
             }
         }
+
+       
+
 
 
         /// <summary>
