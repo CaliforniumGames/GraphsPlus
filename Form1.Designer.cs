@@ -30,6 +30,14 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.fAccuracy = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.fLength = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.fScale = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lineWidth = new System.Windows.Forms.TextBox();
             this.btnDrawCotg = new System.Windows.Forms.Button();
             this.btnDrawTan = new System.Windows.Forms.Button();
             this.btnDrawCos = new System.Windows.Forms.Button();
@@ -48,15 +56,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.canvas = new System.Windows.Forms.Panel();
-            this.lineWidth = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.fScale = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.fLength = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.fAccuracy = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -104,6 +103,82 @@
             this.panel2.Size = new System.Drawing.Size(499, 58);
             this.panel2.TabIndex = 17;
             // 
+            // fAccuracy
+            // 
+            this.fAccuracy.Location = new System.Drawing.Point(218, 30);
+            this.fAccuracy.Name = "fAccuracy";
+            this.fAccuracy.Size = new System.Drawing.Size(52, 20);
+            this.fAccuracy.TabIndex = 28;
+            this.fAccuracy.Text = "0.01";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(147, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 14);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Accuracy";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(152, 8);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 14);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Length";
+            // 
+            // fLength
+            // 
+            this.fLength.Location = new System.Drawing.Point(218, 6);
+            this.fLength.Name = "fLength";
+            this.fLength.Size = new System.Drawing.Size(52, 20);
+            this.fLength.TabIndex = 25;
+            this.fLength.Text = "100";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(3, 33);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 14);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Scale";
+            // 
+            // fScale
+            // 
+            this.fScale.Location = new System.Drawing.Point(84, 30);
+            this.fScale.Name = "fScale";
+            this.fScale.Size = new System.Drawing.Size(52, 20);
+            this.fScale.TabIndex = 23;
+            this.fScale.Text = "30";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(3, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 14);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Line Width";
+            // 
+            // lineWidth
+            // 
+            this.lineWidth.Location = new System.Drawing.Point(84, 6);
+            this.lineWidth.Name = "lineWidth";
+            this.lineWidth.Size = new System.Drawing.Size(52, 20);
+            this.lineWidth.TabIndex = 18;
+            this.lineWidth.Text = "2";
+            // 
             // btnDrawCotg
             // 
             this.btnDrawCotg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
@@ -145,6 +220,7 @@
             this.btnDrawCos.TabIndex = 19;
             this.btnDrawCos.Text = "Cos";
             this.btnDrawCos.UseVisualStyleBackColor = false;
+            this.btnDrawCos.Click += new System.EventHandler(this.btnDrawCos_Click);
             // 
             // btwDrawSin
             // 
@@ -316,82 +392,6 @@
             this.canvas.TabIndex = 1;
             this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.canvas_Paint);
             // 
-            // lineWidth
-            // 
-            this.lineWidth.Location = new System.Drawing.Point(84, 6);
-            this.lineWidth.Name = "lineWidth";
-            this.lineWidth.Size = new System.Drawing.Size(52, 20);
-            this.lineWidth.TabIndex = 18;
-            this.lineWidth.Text = "2";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 14);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Line Width";
-            // 
-            // fScale
-            // 
-            this.fScale.Location = new System.Drawing.Point(84, 30);
-            this.fScale.Name = "fScale";
-            this.fScale.Size = new System.Drawing.Size(52, 20);
-            this.fScale.TabIndex = 23;
-            this.fScale.Text = "30";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 33);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 14);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Scale";
-            // 
-            // fLength
-            // 
-            this.fLength.Location = new System.Drawing.Point(218, 6);
-            this.fLength.Name = "fLength";
-            this.fLength.Size = new System.Drawing.Size(52, 20);
-            this.fLength.TabIndex = 25;
-            this.fLength.Text = "100";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(152, 8);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 14);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Length";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(147, 33);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 14);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Accuracy";
-            // 
-            // fAccuracy
-            // 
-            this.fAccuracy.Location = new System.Drawing.Point(218, 30);
-            this.fAccuracy.Name = "fAccuracy";
-            this.fAccuracy.Size = new System.Drawing.Size(52, 20);
-            this.fAccuracy.TabIndex = 28;
-            this.fAccuracy.Text = "0.01";
-            // 
             // GraphPlus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,7 +436,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox fScale;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox fLength;
         private System.Windows.Forms.TextBox fAccuracy;

@@ -86,6 +86,38 @@ namespace GraphsPlus
             }
         }
 
+        /// <summary>
+        /// Handles Cos Drawing
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDrawCos_Click(object sender, EventArgs e)
+        {
+            // Start Positions
+            float posX = 0;
+            float posY = 0;
+
+            // Position that is calculated based on sin of X
+            float posY_2 = 0;
+
+            // Setting Line params based on LineConfig;
+            LineConfig();
+            myPen.Width = penWidth;
+            myGraphics.Clear(backGroundColor);
+            myGraphics = canvas.CreateGraphics();
+
+            for (float x = 0; x < funcLength; x += accuracy)
+            {
+                posY_2 = (float)Math.Cos(x);
+                // Draws a line from start position to end poisition. End position is calculated based on the SIN function of X. X is multiplied by scale
+                // to move it forward along the x axis and y is multiplyed by scale ant vert offset to position it in the center of the form.
+                myGraphics.DrawLine(myPen, posX * scale, posY * scale + vertOffset, x * scale, posY_2 * scale + vertOffset);
+
+                posX = x;
+                posY = posY_2;
+            }
+        }
+
         private void LineConfig()
         {
              vertOffset = canvas.Height / 2;
@@ -113,6 +145,8 @@ namespace GraphsPlus
                 useRandomColor = false;
             }
         }
+
+       
 
         /// <summary>
         /// Handles drawing the graphic.
