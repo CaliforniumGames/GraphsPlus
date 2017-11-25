@@ -1,0 +1,10 @@
+D:\Desktop\Software Engineering\GraphsPlus\GraphsPlus\bin\Debug\GraphsPlus.exe.config
+D:\Desktop\Software Engineering\GraphsPlus\GraphsPlus\bin\Debug\GraphsPlus.exe
+D:\Desktop\Software Engineering\GraphsPlus\GraphsPlus\bin\Debug\GraphsPlus.pdb
+D:\Desktop\Software Engineering\GraphsPlus\GraphsPlus\obj\Debug\GraphsPlus.csprojResolveAssemblyReference.cache
+D:\Desktop\Software Engineering\GraphsPlus\GraphsPlus\obj\Debug\GraphsPlus.GraphPlus.resources
+D:\Desktop\Software Engineering\GraphsPlus\GraphsPlus\obj\Debug\GraphsPlus.Properties.Resources.resources
+D:\Desktop\Software Engineering\GraphsPlus\GraphsPlus\obj\Debug\GraphsPlus.csproj.GenerateResource.Cache
+D:\Desktop\Software Engineering\GraphsPlus\GraphsPlus\obj\Debug\GraphsPlus.csproj.CoreCompileInputs.cache
+D:\Desktop\Software Engineering\GraphsPlus\GraphsPlus\obj\Debug\GraphsPlus.exe
+D:\Desktop\Software Engineering\GraphsPlus\GraphsPlus\obj\Debug\GraphsPlus.pdb
