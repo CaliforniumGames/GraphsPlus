@@ -248,11 +248,13 @@ namespace GraphsPlus
 
         }
 
+        // Multiply
         private void button8_Click(object sender, EventArgs e)
         {
 
         }
 
+        // Divide
         private void button9_Click(object sender, EventArgs e)
         {
 
