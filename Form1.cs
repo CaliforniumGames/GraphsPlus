@@ -17,8 +17,12 @@ namespace GraphsPlus
     public partial class GraphPlus : Form
     {
         Pen myPen = new Pen(Color.DarkBlue);
+        Pen axisPen = new Pen(Color.Crimson);
         Graphics myGraphics = null;
-        Graphics trigGraphics = null;
+        Graphics sinGraph = null;
+        Graphics cosGraph = null;
+        Graphics tanGraph = null;
+        Graphics axis = null;
 
         static int center_x, center_y;
         static int start_x, start_y;
@@ -37,6 +41,8 @@ namespace GraphsPlus
         static float accuracy = 0;
         static int penWidth = 0;
 
+        float drawY2 = 0;
+
         Color backGroundColor = Color.FromArgb(179, 229, 252);
 
 
@@ -49,12 +55,17 @@ namespace GraphsPlus
            
         }
 
-        
+        private void DrawAxis()
+        {
+            int prevX = canvas.Width/2;
+            int prevY = canvas.Height / 2;
+            axis = canvas.CreateGraphics();
+            axis.DrawLine(axisPen, canvas.Width/2, canvas.Height/2, (canvas.Width/2)+canvas.Width/2, canvas.Height/2);
+            axis.DrawLine(axisPen, canvas.Width / 2, canvas.Height / 2, (canvas.Width / 2) - canvas.Width / 2, canvas.Height / 2);
 
-       
-
-       
-
+            axis.DrawLine(axisPen, canvas.Width / 2, canvas.Height / 2, canvas.Width / 2, (canvas.Height / 2) + canvas.Height/2);
+            axis.DrawLine(axisPen, canvas.Width / 2, canvas.Height / 2, canvas.Width / 2, (canvas.Height / 2) - canvas.Height / 2);
+        }
 
         /// <summary>
         /// Handles Sin drawing
@@ -75,17 +86,20 @@ namespace GraphsPlus
             myPen.Width = penWidth;
             myGraphics.Clear(backGroundColor);
             myGraphics = canvas.CreateGraphics();
+            sinGraph = canvas.CreateGraphics();
+
 
             for (float x = 0; x < funcLength; x += accuracy)
             {
                 posY_2 = (float)Math.Sin(x);
                 // Draws a line from start position to end poisition. End position is calculated based on the SIN function of X. X is multiplied by scale
                 // to move it forward along the x axis and y is multiplyed by scale ant vert offset to position it in the center of the form.
-                myGraphics.DrawLine(myPen, posX * scale, posY * scale + vertOffset, x * scale, posY_2 * scale + vertOffset);
+                sinGraph.DrawLine(myPen, posX * scale, posY * scale + vertOffset, x * scale, posY_2 * scale + vertOffset);
 
                 posX = x;
                 posY = posY_2;
             }
+            DrawAxis();
         }
 
         /// <summary>
@@ -106,18 +120,20 @@ namespace GraphsPlus
             LineConfig();
             myPen.Width = penWidth;
             myGraphics.Clear(backGroundColor);
-            myGraphics = canvas.CreateGraphics();
+            cosGraph = canvas.CreateGraphics();
+   
 
             for (float x = 0; x < funcLength; x += accuracy)
             {
                 posY_2 = (float)Math.Cos(x);
                 // Draws a line from start position to end poisition. End position is calculated based on the SIN function of X. X is multiplied by scale
                 // to move it forward along the x axis and y is multiplyed by scale ant vert offset to position it in the center of the form.
-                myGraphics.DrawLine(myPen, posX * scale, posY * scale + vertOffset, x * scale, posY_2 * scale + vertOffset);
+                cosGraph.DrawLine(myPen, posX * scale, posY * scale + vertOffset, x * scale, posY_2 * scale + vertOffset);
 
                 posX = x;
                 posY = posY_2;
             }
+            DrawAxis();
         }
 
         /// <summary>
@@ -138,19 +154,74 @@ namespace GraphsPlus
             LineConfig();
             myPen.Width = penWidth;
             myGraphics.Clear(backGroundColor);
-            myGraphics = canvas.CreateGraphics();
+            tanGraph = canvas.CreateGraphics();
+            
 
             for (float x = 0; x < funcLength; x += accuracy)
             {
                 posY_2 = (float)Math.Tan(x);
                 // Draws a line from start position to end poisition. End position is calculated based on the SIN function of X. X is multiplied by scale
                 // to move it forward along the x axis and y is multiplyed by scale ant vert offset to position it in the center of the form.
-                myGraphics.DrawLine(myPen, posX * scale, posY * scale + vertOffset, x * scale, posY_2 * scale + vertOffset);
+                tanGraph.DrawLine(myPen, posX * scale, posY * scale + vertOffset, x * scale, posY_2 * scale + vertOffset);
 
                 posX = x;
                 posY = posY_2;
             }
+            DrawAxis();
         }
+
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            myGraphics.Clear(backGroundColor);
+
+            int pos1 = int.Parse(cPos1.Text);
+            int pos2 = int.Parse(cPos1.Text);
+            int pos3 = int.Parse(cPos1.Text);
+            int pos4 = int.Parse(cPos1.Text);
+
+            
+
+            myGraphics.DrawEllipse(myPen, pos1, pos2, pos3, pos4);
+            DrawAxis();
+        }
+
+
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            // Start Positions
+            float posX = 0;
+            float posY = 0;
+
+            // Position that is calculated based on sin of X
+
+            // Setting Line params based on LineConfig;
+            LineConfig();
+            myPen.Width = penWidth;
+            myGraphics.Clear(backGroundColor);
+            tanGraph = canvas.CreateGraphics();
+
+
+            for (float x = 0; x < funcLength; x += accuracy)
+            {
+                drawY2 = (float)Math.Tan(x);
+                // Draws a line from start position to end poisition. End position is calculated based on the SIN function of X. X is multiplied by scale
+                // to move it forward along the x axis and y is multiplyed by scale ant vert offset to position it in the center of the form.
+                tanGraph.DrawLine(myPen, posX * scale, posY * scale + vertOffset, x * scale, drawY2 * scale + vertOffset);
+
+                posX = x;
+                posY = drawY2;
+            }
+            DrawAxis();
+        }
+
+
 
         private void LineConfig()
         {
@@ -186,9 +257,15 @@ namespace GraphsPlus
             }
         }
 
-       
+        private void label5_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         /// <summary>
         /// Handles drawing the graphic.
