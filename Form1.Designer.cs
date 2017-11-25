@@ -68,14 +68,14 @@
             this.label14 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.funcInput = new System.Windows.Forms.TextBox();
+            this.mathSin = new System.Windows.Forms.Button();
+            this.mathCos = new System.Windows.Forms.Button();
+            this.mathTan = new System.Windows.Forms.Button();
+            this.addTo = new System.Windows.Forms.Button();
+            this.subtractFrom = new System.Windows.Forms.Button();
+            this.multiply = new System.Windows.Forms.Button();
+            this.divide = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -528,14 +528,14 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.panel4.Controls.Add(this.button10);
-            this.panel4.Controls.Add(this.button9);
-            this.panel4.Controls.Add(this.button8);
-            this.panel4.Controls.Add(this.button7);
-            this.panel4.Controls.Add(this.button6);
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.divide);
+            this.panel4.Controls.Add(this.multiply);
+            this.panel4.Controls.Add(this.subtractFrom);
+            this.panel4.Controls.Add(this.addTo);
+            this.panel4.Controls.Add(this.mathTan);
+            this.panel4.Controls.Add(this.mathCos);
+            this.panel4.Controls.Add(this.mathSin);
+            this.panel4.Controls.Add(this.funcInput);
             this.panel4.Controls.Add(this.label15);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 497);
@@ -554,111 +554,117 @@
             this.label15.TabIndex = 36;
             this.label15.Text = "X";
             // 
-            // textBox1
+            // funcInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(34, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(761, 20);
-            this.textBox1.TabIndex = 37;
+            this.funcInput.Location = new System.Drawing.Point(34, 8);
+            this.funcInput.Name = "funcInput";
+            this.funcInput.Size = new System.Drawing.Size(761, 20);
+            this.funcInput.TabIndex = 37;
             // 
-            // button3
+            // mathSin
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.button3.Location = new System.Drawing.Point(801, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 26);
-            this.button3.TabIndex = 34;
-            this.button3.Text = "Math.Sin";
-            this.button3.UseVisualStyleBackColor = false;
+            this.mathSin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.mathSin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.mathSin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mathSin.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mathSin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.mathSin.Location = new System.Drawing.Point(801, 4);
+            this.mathSin.Name = "mathSin";
+            this.mathSin.Size = new System.Drawing.Size(87, 26);
+            this.mathSin.TabIndex = 34;
+            this.mathSin.Text = "Math.Sin";
+            this.mathSin.UseVisualStyleBackColor = false;
+            this.mathSin.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // mathCos
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.button4.Location = new System.Drawing.Point(894, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 26);
-            this.button4.TabIndex = 38;
-            this.button4.Text = "Math.Cos";
-            this.button4.UseVisualStyleBackColor = false;
+            this.mathCos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.mathCos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.mathCos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mathCos.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mathCos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.mathCos.Location = new System.Drawing.Point(894, 4);
+            this.mathCos.Name = "mathCos";
+            this.mathCos.Size = new System.Drawing.Size(87, 26);
+            this.mathCos.TabIndex = 38;
+            this.mathCos.Text = "Math.Cos";
+            this.mathCos.UseVisualStyleBackColor = false;
+            this.mathCos.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // mathTan
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.button5.Location = new System.Drawing.Point(987, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 26);
-            this.button5.TabIndex = 39;
-            this.button5.Text = "Math.Tan";
-            this.button5.UseVisualStyleBackColor = false;
+            this.mathTan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.mathTan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.mathTan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mathTan.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mathTan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.mathTan.Location = new System.Drawing.Point(987, 4);
+            this.mathTan.Name = "mathTan";
+            this.mathTan.Size = new System.Drawing.Size(87, 26);
+            this.mathTan.TabIndex = 39;
+            this.mathTan.Text = "Math.Tan";
+            this.mathTan.UseVisualStyleBackColor = false;
+            this.mathTan.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // addTo
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.button6.Location = new System.Drawing.Point(1080, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(26, 26);
-            this.button6.TabIndex = 40;
-            this.button6.Text = "+";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.addTo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.addTo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.addTo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addTo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addTo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.addTo.Location = new System.Drawing.Point(1080, 4);
+            this.addTo.Name = "addTo";
+            this.addTo.Size = new System.Drawing.Size(26, 26);
+            this.addTo.TabIndex = 40;
+            this.addTo.Text = "+";
+            this.addTo.UseVisualStyleBackColor = false;
+            this.addTo.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // subtractFrom
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.button7.Location = new System.Drawing.Point(1112, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(26, 26);
-            this.button7.TabIndex = 41;
-            this.button7.Text = "-";
-            this.button7.UseVisualStyleBackColor = false;
+            this.subtractFrom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.subtractFrom.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.subtractFrom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.subtractFrom.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtractFrom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.subtractFrom.Location = new System.Drawing.Point(1112, 4);
+            this.subtractFrom.Name = "subtractFrom";
+            this.subtractFrom.Size = new System.Drawing.Size(26, 26);
+            this.subtractFrom.TabIndex = 41;
+            this.subtractFrom.Text = "-";
+            this.subtractFrom.UseVisualStyleBackColor = false;
+            this.subtractFrom.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // multiply
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.button8.Location = new System.Drawing.Point(1144, 4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(26, 26);
-            this.button8.TabIndex = 42;
-            this.button8.Text = "*";
-            this.button8.UseVisualStyleBackColor = false;
+            this.multiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.multiply.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.multiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.multiply.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.multiply.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.multiply.Location = new System.Drawing.Point(1144, 4);
+            this.multiply.Name = "multiply";
+            this.multiply.Size = new System.Drawing.Size(26, 26);
+            this.multiply.TabIndex = 42;
+            this.multiply.Text = "*";
+            this.multiply.UseVisualStyleBackColor = false;
+            this.multiply.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button9
+            // divide
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.button9.Location = new System.Drawing.Point(1176, 4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(26, 26);
-            this.button9.TabIndex = 43;
-            this.button9.Text = "/";
-            this.button9.UseVisualStyleBackColor = false;
+            this.divide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.divide.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
+            this.divide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.divide.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.divide.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.divide.Location = new System.Drawing.Point(1176, 4);
+            this.divide.Name = "divide";
+            this.divide.Size = new System.Drawing.Size(26, 26);
+            this.divide.TabIndex = 43;
+            this.divide.Text = "/";
+            this.divide.UseVisualStyleBackColor = false;
+            this.divide.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -739,17 +745,17 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button addTo;
+        private System.Windows.Forms.Button mathTan;
+        private System.Windows.Forms.Button mathCos;
+        private System.Windows.Forms.Button mathSin;
+        private System.Windows.Forms.TextBox funcInput;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button divide;
+        private System.Windows.Forms.Button multiply;
+        private System.Windows.Forms.Button subtractFrom;
     }
 }
 

@@ -42,6 +42,7 @@ namespace GraphsPlus
         static int penWidth = 0;
 
         float drawY2 = 0;
+        double input = 0;
 
         Color backGroundColor = Color.FromArgb(179, 229, 252);
 
@@ -188,11 +189,6 @@ namespace GraphsPlus
 
 
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button10_Click(object sender, EventArgs e)
         {
             // Start Positions
@@ -210,7 +206,7 @@ namespace GraphsPlus
 
             for (float x = 0; x < funcLength; x += accuracy)
             {
-                drawY2 = (float)Math.Tan(x);
+                drawY2 = (float)input;
                 // Draws a line from start position to end poisition. End position is calculated based on the SIN function of X. X is multiplied by scale
                 // to move it forward along the x axis and y is multiplyed by scale ant vert offset to position it in the center of the form.
                 tanGraph.DrawLine(myPen, posX * scale, posY * scale + vertOffset, x * scale, drawY2 * scale + vertOffset);
@@ -221,7 +217,48 @@ namespace GraphsPlus
             DrawAxis();
         }
 
+        // Math sin
+        private void button3_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        // Math cos
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Math Tan
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        // Add
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Subtract
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
 
         private void LineConfig()
         {
@@ -266,6 +303,7 @@ namespace GraphsPlus
         {
 
         }
+
 
         /// <summary>
         /// Handles drawing the graphic.
