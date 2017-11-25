@@ -38,7 +38,6 @@
             this.fScale = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lineWidth = new System.Windows.Forms.TextBox();
-            this.btnDrawCotg = new System.Windows.Forms.Button();
             this.btnDrawTan = new System.Windows.Forms.Button();
             this.btnDrawCos = new System.Windows.Forms.Button();
             this.btwDrawSin = new System.Windows.Forms.Button();
@@ -93,14 +92,13 @@
             this.panel2.Controls.Add(this.fScale);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.lineWidth);
-            this.panel2.Controls.Add(this.btnDrawCotg);
             this.panel2.Controls.Add(this.btnDrawTan);
             this.panel2.Controls.Add(this.btnDrawCos);
             this.panel2.Controls.Add(this.btwDrawSin);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(636, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(499, 58);
+            this.panel2.Size = new System.Drawing.Size(437, 58);
             this.panel2.TabIndex = 17;
             // 
             // fAccuracy
@@ -179,20 +177,6 @@
             this.lineWidth.TabIndex = 18;
             this.lineWidth.Text = "2";
             // 
-            // btnDrawCotg
-            // 
-            this.btnDrawCotg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.btnDrawCotg.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
-            this.btnDrawCotg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDrawCotg.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDrawCotg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.btnDrawCotg.Location = new System.Drawing.Point(433, 23);
-            this.btnDrawCotg.Name = "btnDrawCotg";
-            this.btnDrawCotg.Size = new System.Drawing.Size(58, 30);
-            this.btnDrawCotg.TabIndex = 21;
-            this.btnDrawCotg.Text = "Cotg";
-            this.btnDrawCotg.UseVisualStyleBackColor = false;
-            // 
             // btnDrawTan
             // 
             this.btnDrawTan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(118)))));
@@ -206,6 +190,7 @@
             this.btnDrawTan.TabIndex = 20;
             this.btnDrawTan.Text = "Tan";
             this.btnDrawTan.UseVisualStyleBackColor = false;
+            this.btnDrawTan.Click += new System.EventHandler(this.btnDrawTan_Click);
             // 
             // btnDrawCos
             // 
@@ -430,7 +415,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnDrawCos;
         private System.Windows.Forms.Button btwDrawSin;
-        private System.Windows.Forms.Button btnDrawCotg;
         private System.Windows.Forms.Button btnDrawTan;
         private System.Windows.Forms.TextBox lineWidth;
         private System.Windows.Forms.Label label7;
