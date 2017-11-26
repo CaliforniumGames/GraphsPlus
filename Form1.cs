@@ -34,6 +34,7 @@ namespace GraphsPlus
         static int num_lines = 0;
 
         static bool useRandomColor;
+        static bool allowDrawOver;
 
         static float vertOffset = 0;
         static float scale = 0;
@@ -52,20 +53,39 @@ namespace GraphsPlus
             InitializeComponent();
             start_x = canvas.Width / 2;
             start_y = canvas.Height / 2;
-
-           
+            allowDrawOver = false;
         }
-
+        #region Trigonometry functions
         private void DrawAxis()
         {
-            int prevX = canvas.Width/2;
-            int prevY = canvas.Height / 2;
+            int prevX = canvas.Width / 2;
+            int prevY = canvas.Height/ 2;
+            int nextX = canvas.Width/ 2;
+            int nextY = canvas.Height/2;
+
             axis = canvas.CreateGraphics();
-            axis.DrawLine(axisPen, canvas.Width/2, canvas.Height/2, (canvas.Width/2)+canvas.Width/2, canvas.Height/2);
+            axis.DrawLine(axisPen, canvas.Width / 2, canvas.Height / 2, (canvas.Width / 2) + canvas.Width / 2, canvas.Height / 2);
             axis.DrawLine(axisPen, canvas.Width / 2, canvas.Height / 2, (canvas.Width / 2) - canvas.Width / 2, canvas.Height / 2);
 
-            axis.DrawLine(axisPen, canvas.Width / 2, canvas.Height / 2, canvas.Width / 2, (canvas.Height / 2) + canvas.Height/2);
+            axis.DrawLine(axisPen, canvas.Width / 2, canvas.Height / 2, canvas.Width / 2, (canvas.Height / 2) + canvas.Height / 2);
             axis.DrawLine(axisPen, canvas.Width / 2, canvas.Height / 2, canvas.Width / 2, (canvas.Height / 2) - canvas.Height / 2);
+
+
+            for (float y = 0; y < funcLength; y += accuracy)
+            {
+                prevX += 10;
+                prevY += 10;
+
+                nextX -= 10;
+                nextY -= 10;
+
+                axis.DrawLine(axisPen, prevX, canvas.Height / 2, prevX, (canvas.Height / 2) + 5);
+                axis.DrawLine(axisPen, nextX, canvas.Height / 2, nextX, (canvas.Height / 2) + 5);
+
+                axis.DrawLine(axisPen, canvas.Width / 2, prevY, (canvas.Width / 2) + 5, prevY);
+                axis.DrawLine(axisPen, canvas.Width / 2, nextY, (canvas.Width / 2) + 5, nextY);
+            }
+
         }
 
         /// <summary>
@@ -83,9 +103,10 @@ namespace GraphsPlus
             float posY_2 = 0;
 
             // Setting Line params based on LineConfig;
+            if (!allowDrawOver)
+                myGraphics.Clear(backGroundColor);
             LineConfig();
             myPen.Width = penWidth;
-            myGraphics.Clear(backGroundColor);
             myGraphics = canvas.CreateGraphics();
             sinGraph = canvas.CreateGraphics();
 
@@ -93,10 +114,12 @@ namespace GraphsPlus
             for (float x = 0; x < funcLength; x += accuracy)
             {
                 posY_2 = (float)Math.Sin(x);
+                
                 // Draws a line from start position to end poisition. End position is calculated based on the SIN function of X. X is multiplied by scale
                 // to move it forward along the x axis and y is multiplyed by scale ant vert offset to position it in the center of the form.
                 sinGraph.DrawLine(myPen, posX * scale, posY * scale + vertOffset, x * scale, posY_2 * scale + vertOffset);
 
+              
                 posX = x;
                 posY = posY_2;
             }
@@ -118,11 +141,12 @@ namespace GraphsPlus
             float posY_2 = 0;
 
             // Setting Line params based on LineConfig;
+            if (!allowDrawOver)
+                myGraphics.Clear(backGroundColor);
             LineConfig();
             myPen.Width = penWidth;
-            myGraphics.Clear(backGroundColor);
             cosGraph = canvas.CreateGraphics();
-   
+
 
             for (float x = 0; x < funcLength; x += accuracy)
             {
@@ -152,11 +176,12 @@ namespace GraphsPlus
             float posY_2 = 0;
 
             // Setting Line params based on LineConfig;
+            if (!allowDrawOver)
+                myGraphics.Clear(backGroundColor);
             LineConfig();
             myPen.Width = penWidth;
-            myGraphics.Clear(backGroundColor);
             tanGraph = canvas.CreateGraphics();
-            
+
 
             for (float x = 0; x < funcLength; x += accuracy)
             {
@@ -170,116 +195,33 @@ namespace GraphsPlus
             }
             DrawAxis();
         }
+        #endregion
 
-
+        /// <summary>
+        /// Draws circles based on points.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click_2(object sender, EventArgs e)
         {
-            myGraphics.Clear(backGroundColor);
-
-            int pos1 = int.Parse(cPos1.Text);
-            int pos2 = int.Parse(cPos1.Text);
-            int pos3 = int.Parse(cPos1.Text);
-            int pos4 = int.Parse(cPos1.Text);
-
-            
-
+            myGraphics.Clear(backGroundColor);      
+            int pos3 = int.Parse(cPos3.Text);
+            int pos4 = int.Parse(cPos4.Text);
+            int pos1 = canvas.Width / 2 - pos3/2;
+            int pos2 = canvas.Height / 2 - pos4/2;
             myGraphics.DrawEllipse(myPen, pos1, pos2, pos3, pos4);
             DrawAxis();
         }
 
-
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            // Start Positions
-            float posX = 0;
-            float posY = 0;
-            float y = 0;
-            string inputStr = funcInput.Text;
-            
-            // Position that is calculated based on sin of X
-
-            // Setting Line params based on LineConfig;
-            LineConfig();
-            myPen.Width = penWidth;
-            myGraphics.Clear(backGroundColor);
-            tanGraph = canvas.CreateGraphics();
-
-
-
-            for (y = 0; y < funcLength; y += accuracy)
-            {
-               // drawY2 = (float)Math.Tan(10);
-                // Draws a line from start position to end poisition. End position is calculated based on the SIN function of X. X is multiplied by scale
-                // to move it forward along the x axis and y is multiplyed by scale ant vert offset to position it in the center of the form.
-                tanGraph.DrawLine(myPen, posX * scale, posY * scale + vertOffset, y * scale, drawY2 * scale + vertOffset);
-
-                posX = y;
-                posY = drawY2;
-            }
-            DrawAxis();
-        }
-
-        // Math sin
-        private void button3_Click(object sender, EventArgs e)
-        {
-            double x = 0;
-            string inputStr = funcInput.Text;
-            inputStr.Replace("y", x.ToString());
-            double number;
-            number = double.Parse(inputStr);  
-          
-            input = Math.Sin(number); 
-        }
-
-        // Math cos
-        private void button4_Click(object sender, EventArgs e)
-        {
-            double x = 0;
-            input = Math.Cos(double.Parse(funcInput.Text));
-        }
-
-        // Math Tan
-        private void button5_Click(object sender, EventArgs e)
-        {
-            double x = 0;
-            input = Math.Tan(double.Parse(funcInput.Text));
-        }
-
-
-        // Add
-        private void button6_Click(object sender, EventArgs e)
-        {
-            drawY2 = drawY2 + (float)input;
-        }
-
-        // Subtract
-        private void button7_Click(object sender, EventArgs e)
-        {
-            drawY2 = drawY2 - (float)input;
-        }
-
-        // Multiply
-        private void button8_Click(object sender, EventArgs e)
-        {
-            drawY2 = drawY2 * (float)input;
-        }
-
-        // Divide
-        private void button9_Click(object sender, EventArgs e)
-        {
-            drawY2 = drawY2 / (float)input;
-        }
-
-        
+       
 
         private void LineConfig()
         {
-             vertOffset = canvas.Height / 2;
-             scale = float.Parse(fScale.Text);
-             funcLength = float.Parse(fLength.Text);
-             accuracy = float.Parse(fAccuracy.Text);
-             penWidth = int.Parse(lineWidth.Text);
+            vertOffset = canvas.Height / 2;
+            scale = float.Parse(fScale.Text);
+            funcLength = float.Parse(fLength.Text);
+            accuracy = float.Parse(fAccuracy.Text);
+            penWidth = int.Parse(lineWidth.Text);
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -319,7 +261,32 @@ namespace GraphsPlus
 
         private void GraphPlus_Load(object sender, EventArgs e)
         {
-             
+
+        }
+
+        // Turn On DrawOver mode.
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioButton3.Checked == true)
+            allowDrawOver = true;
+        }
+
+        // Turn Off DrawOver mode.
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton4.Checked == true)
+                allowDrawOver = false;
+        }
+
+        /// <summary>
+        /// Clear all graphics
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button3_Click(object sender, EventArgs e)
+        {
+            myGraphics.Clear(backGroundColor);
+            DrawAxis();
         }
         #endregion
 
@@ -339,7 +306,7 @@ namespace GraphsPlus
             {
                 myPen.Color = Color.DarkBlue;
             }
-            
+
             // Sets angle and length.
             my_angle = my_angle + Int32.Parse(angle.Text);
             my_length = my_length + Int32.Parse(increment.Text);
@@ -354,7 +321,7 @@ namespace GraphsPlus
                     new Point(start_x, start_y),
                     new Point(end_x, end_y)
                 };
-            
+
             // Sets the new start points as the previous end points.
             start_x = end_x;
             start_y = end_y;
@@ -390,7 +357,7 @@ namespace GraphsPlus
         private void canvas_Paint(object sender, PaintEventArgs e)
         {
             myPen.Width = 2;
-           // my_length = Int32.Parse(length.Text);
+            // my_length = Int32.Parse(length.Text);
             myGraphics = canvas.CreateGraphics();
             //Calls the draw function based on the number of lines the user wants.
             for (int i = 0; i < Int32.Parse(lineNum.Text); i++)
@@ -398,6 +365,6 @@ namespace GraphsPlus
                 DrawImage();
             }
         }
-#endregion
+        #endregion
     }
 }
