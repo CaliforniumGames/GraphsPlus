@@ -106,7 +106,6 @@ namespace GraphsPlus
         {
           CustomFunction();
         }
-
        
 
         /// <summary>
@@ -143,11 +142,42 @@ namespace GraphsPlus
             // to move it forward along the x axis and y is multiplyed by scale ant vert offset to position it in the center of the form.
             myGraphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
-            myGraphics.DrawLines(myPen, points);
+            myGraphics.DrawCurve(myPen, points);
+            DrawAxis();
+        }
 
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            // Start Positions
+            float posX = canvas.Width / 2;
+            float posY = canvas.Height / 2;
 
+            // Position that is calculated based on sin of X
+            float posY_2 = 0;
 
+            // Setting Line params based on LineConfig;
+            if (!allowDrawOver)
+                myGraphics.Clear(backGroundColor);
+            LineConfig();
+            myPen.Width = penWidth;
+            myGraphics = canvas.CreateGraphics();
 
+            //posY_2 = (float)((x * x * x) / 10);
+            int arraySize = 200;
+            Random numGen = new Random();
+            PointF[] points = new PointF[arraySize];
+
+            for (int i = 0; i < arraySize; i += 1)
+            {
+                points[i] = new PointF((int)(i) * scale + canvas.Width / 2, (int)(i + Math.Cos(i) * scale + vertOffset));
+
+            }
+
+            // Draws a line from start position to end poisition. End position is calculated based on the SIN function of X. X is multiplied by scale
+            // to move it forward along the x axis and y is multiplyed by scale ant vert offset to position it in the center of the form.
+            myGraphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            myGraphics.DrawCurve(myPen, points);
             DrawAxis();
         }
 
@@ -396,10 +426,7 @@ namespace GraphsPlus
 
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-          
-        }
+       
 
         #endregion
 

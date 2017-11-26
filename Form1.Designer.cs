@@ -555,17 +555,17 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.button5.Location = new System.Drawing.Point(208, 2);
+            this.button5.Location = new System.Drawing.Point(15, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(131, 28);
+            this.button5.Size = new System.Drawing.Size(67, 28);
             this.button5.TabIndex = 41;
-            this.button5.Text = "Custom Function";
+            this.button5.Text = "Heart";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // funcInput
             // 
-            this.funcInput.Location = new System.Drawing.Point(12, 7);
+            this.funcInput.Location = new System.Drawing.Point(904, 7);
             this.funcInput.Name = "funcInput";
             this.funcInput.Size = new System.Drawing.Size(190, 20);
             this.funcInput.TabIndex = 42;
@@ -598,9 +598,9 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.button4.Location = new System.Drawing.Point(767, 2);
+            this.button4.Location = new System.Drawing.Point(88, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(131, 28);
+            this.button4.Size = new System.Drawing.Size(62, 28);
             this.button4.TabIndex = 46;
             this.button4.Text = "Custom Function";
             this.button4.UseVisualStyleBackColor = false;
