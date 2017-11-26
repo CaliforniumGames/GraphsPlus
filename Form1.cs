@@ -24,6 +24,11 @@ namespace GraphsPlus
         Graphics tanGraph = null;
         Graphics axis = null;
 
+       float pos3 = 0;
+       float pos4 = 0;
+       float pos1 = 0;
+       float pos2 = 0;
+
         static int center_x, center_y;
         static int start_x, start_y;
         static int end_x, end_y;
@@ -44,10 +49,15 @@ namespace GraphsPlus
 
         float drawY2 = 0;
         double input = 0;
+        float z = 0;
+
+        List<double> values = new List<double>();
 
         Color backGroundColor = Color.FromArgb(179, 229, 252);
 
-
+        /// <summary>
+        /// Constructer
+        /// </summary>
         public GraphPlus()
         {
             InitializeComponent();
@@ -55,7 +65,10 @@ namespace GraphsPlus
             start_y = canvas.Height / 2;
             allowDrawOver = false;
         }
-        #region Trigonometry functions
+
+        /// <summary>
+        /// Draws Axis
+        /// </summary>
         private void DrawAxis()
         {
             int prevX = canvas.Width / 2;
@@ -88,6 +101,57 @@ namespace GraphsPlus
 
         }
 
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+          CustomFunction();
+        }
+
+       
+
+        /// <summary>
+        /// Custom Functions
+        /// </summary>
+        private void CustomFunction()
+        {
+            // Start Positions
+            float posX = canvas.Width/2;
+            float posY = canvas.Height/2;
+
+            // Position that is calculated based on sin of X
+            float posY_2 = 0;
+
+            // Setting Line params based on LineConfig;
+            if (!allowDrawOver)
+                myGraphics.Clear(backGroundColor);
+            LineConfig();
+            myPen.Width = penWidth;
+            myGraphics = canvas.CreateGraphics();
+
+            //posY_2 = (float)((x * x * x) / 10);
+            int arraySize = 200;
+            Random numGen = new Random();
+            PointF[] points = new PointF[arraySize];
+        
+            for (int i = 0; i < arraySize; i++)
+            {
+                points[i] = new PointF((int)-(16*Math.Sin(i)* Math.Sin(i)* Math.Sin(i))*scale+canvas.Width/2, (int)-(13*Math.Cos(i)-5*Math.Cos(2*i)-2*Math.Cos(3*i)-Math.Cos(4*i))*scale + vertOffset);
+                
+            }
+
+            // Draws a line from start position to end poisition. End position is calculated based on the SIN function of X. X is multiplied by scale
+            // to move it forward along the x axis and y is multiplyed by scale ant vert offset to position it in the center of the form.
+            myGraphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            myGraphics.DrawLines(myPen, points);
+
+
+
+
+            DrawAxis();
+        }
+
+        #region Trigonometry Functions
         /// <summary>
         /// Handles Sin drawing
         /// </summary>
@@ -109,6 +173,8 @@ namespace GraphsPlus
             myPen.Width = penWidth;
             myGraphics = canvas.CreateGraphics();
             sinGraph = canvas.CreateGraphics();
+            sinGraph.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
 
 
             for (float x = 0; x < funcLength; x += accuracy)
@@ -146,6 +212,8 @@ namespace GraphsPlus
             LineConfig();
             myPen.Width = penWidth;
             cosGraph = canvas.CreateGraphics();
+            cosGraph.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
 
 
             for (float x = 0; x < funcLength; x += accuracy)
@@ -181,6 +249,8 @@ namespace GraphsPlus
             LineConfig();
             myPen.Width = penWidth;
             tanGraph = canvas.CreateGraphics();
+            tanGraph.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
 
 
             for (float x = 0; x < funcLength; x += accuracy)
@@ -195,7 +265,8 @@ namespace GraphsPlus
             }
             DrawAxis();
         }
-        #endregion
+
+#endregion
 
         /// <summary>
         /// Draws circles based on points.
@@ -205,16 +276,26 @@ namespace GraphsPlus
         private void button2_Click_2(object sender, EventArgs e)
         {
             myGraphics.Clear(backGroundColor);      
-            int pos3 = int.Parse(cPos3.Text);
-            int pos4 = int.Parse(cPos4.Text);
-            int pos1 = canvas.Width / 2 - pos3/2;
-            int pos2 = canvas.Height / 2 - pos4/2;
+            pos3 = int.Parse(cPos3.Text);
+            pos4 = int.Parse(cPos4.Text);
+            pos1 = canvas.Width / 2 - pos3/2;
+            pos2 = canvas.Height / 2 - pos4/2;
+            DrawCircle();
+        }
+
+        /// <summary>
+        /// Independent Draw cirlce function.
+        /// </summary>
+        private void DrawCircle()
+        {
             myGraphics.DrawEllipse(myPen, pos1, pos2, pos3, pos4);
             DrawAxis();
         }
-
        
 
+        /// <summary>
+        /// Sets line parameters for trigonometry functions
+        /// </summary>
         private void LineConfig()
         {
             vertOffset = canvas.Height / 2;
@@ -231,7 +312,11 @@ namespace GraphsPlus
 
 
         #region Fractal Drawings
-        // Checks radio buttons.
+        /// <summary>
+        /// Handles Turning on Random Color generation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -241,6 +326,11 @@ namespace GraphsPlus
 
         }
 
+        /// <summary>
+        /// Handles turning off  Random Color generation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton2.Checked)
@@ -248,7 +338,9 @@ namespace GraphsPlus
                 useRandomColor = false;
             }
         }
+
         #region mistakes 
+
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -288,6 +380,27 @@ namespace GraphsPlus
             myGraphics.Clear(backGroundColor);
             DrawAxis();
         }
+
+        /// <summary>
+        /// Random Graphic Generator
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button4_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void numOfLines_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+          
+        }
+
         #endregion
 
         /// <summary>
@@ -328,6 +441,8 @@ namespace GraphsPlus
 
             // Draws the Graphic based on the (points) array.
             myGraphics.DrawLines(myPen, points);
+            myGraphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
 
         }
 
